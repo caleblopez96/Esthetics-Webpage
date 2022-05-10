@@ -1,0 +1,2 @@
+# Esthetics-Webpage
+This is a simple webpage made for an Esthetics business. The entire webpage in currently in production and is being designed mobile first. If you try to use this repository and the webpage looks broken on larger screen sizes, it's because the page hasn't been finished. I encourage startup's, small business owners, and self-employed to use this website and fill in the blanks(lorem) for what your business/webpage needs. Please DM if you need any help tailoring the webpage to fit your needs.
