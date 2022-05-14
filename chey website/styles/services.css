@@ -1,4 +1,5 @@
 :root {
+    --background-color: #cbdbcd8c;
     --font-primary-clr: rgba(107, 112, 92, 80%);
     --font-secondary-clr: rgba(104, 104, 104, 80%);
     --font-accent-clr: #ffe8d6;
@@ -56,9 +57,19 @@ body {
     cursor: pointer;
 }
 
+.link:last-child { /* moved this from the 500 media query too*/
+    margin-right: 1em;
+}
+
 .logo {
     height: 100px;
     width: 100px;
+    padding-top: .5em;
+    padding-bottom: .75em;
+}
+
+.logo:first-child { /*moved this from the 500px media query*/
+    margin-right: auto;
 }
 
 a:visited {
@@ -87,14 +98,6 @@ a {
     mask: linear-gradient(#0000 1%,#000 3.5%);
 }
 
-.containerOne sub {
-    color: rgba(0, 0, 0, 70%);
-    font-weight: 500;
-    text-shadow: #000;
-    background-color: rgba(255, 232, 214, 30%);
-    padding-top: .5em;
-}
-
 /* main content styles */
 
 .wrapper {
@@ -109,7 +112,7 @@ a {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    border-bottom: 2px solid var(--font-primary-clr);
+    border-bottom: 5px solid var(--font-primary-clr);
     padding: 1em;
     width: auto;
 }
@@ -155,14 +158,28 @@ h3 {
     padding-top: 1em;
     padding-bottom: .25em;
     font-size: 1em;
+    text-align: center; /* delete this*/
+}
+
+section {
+    font-family: var(--font-family-body);
+    font-size: .9em;
+    padding: 1.5em 1em;
+    line-height: 1.25em;
+    font-weight: 400;
+    text-shadow: #000;
+    background-color: rgba(255, 232, 214, 45%);
 }
 
 sub {
     font-family: var(--font-family-subbody);
     padding-bottom: 1em;
-    color: var(--font-tertiary-clr);
+    color: #000;
     font-weight: 400;
-    font-size: 1.1em;
+    font-size: .8em;
+    padding: 1em .5em;
+    text-align: center;
+    font-style: italic; /* delete this */
 }
 
 p {
@@ -170,13 +187,14 @@ p {
     padding-bottom: 1em;
     color: var(--font-tertiary-clr);
     font-weight: 300;
-    font-size: .9em;
+    font-size: .85em;
 }
 
 b {
-    font-weight: 600;
+    font-weight: 550;
     font-size: 1em;
     color: var(--font-boldtext-clr);
+
 }
 
 i {
@@ -184,9 +202,14 @@ i {
     color: var(--font-primary-clr);
 }
 
+sup {
+    font-size: .5em;
+}
+
 .bookbutton {
     justify-content: center;
     align-self: center;
+    height: 3.5em;
     width: 7em;
     margin: 1em 0;
     padding: 0.6em 2em;
@@ -202,13 +225,12 @@ i {
     -webkit-user-select: none;
     touch-action: manipulation;
     text-decoration: none;
-    height: 3.5em;
     font-weight: 400;
 }
 
 .bookbutton:hover {
     color: black;
-    background: #fff;
+    background: var(--background-color);
     cursor: pointer;
 }
 
@@ -232,14 +254,57 @@ footer {
 
 /*----------media queries start here----------*/
 
-/*small device media queries (built mobile first, not much here)*/
+/*medium device media queries (built mobile first, not much here)*/
+@media screen and (min-width: 637px) {
+.topNav {
+    font-size: 1.25em;
+}
 
-@media screen and (max-width: 500px) {
-.logo:first-child {
-    margin-right: auto;
-    }
+.logo {
+    height: 125px;
+    width: 125px;
+}
 
-.link:last-child {
-    margin-right: 1.5em;
+.picture {
+    height: 350px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.containerOne {
+    background-image: url(/images/pexels-arina-krasnikova-6663574\ -\ Copy.jpg);
+    font-size: 1.5em;
+    height: 525px;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+sub {
+    font-size: 1.1em;
+}
+
+p {
+    font-size: .9em;
+}
+
+b {
+    font-size: 1.1em;
+}
+
+.bookbutton {
+    font-size: 1em;
 }
 }
+
+/* find out and fix why its funky inbetween media queries*/
+
+/* i cenered the h3 and sub with text-align : center; but dont know if I like it. I changed the font color of the shit in the body. That I kinda like.*/ 

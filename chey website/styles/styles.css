@@ -1,5 +1,6 @@
 * {
     padding: 0; 
+    margin: 0;
 }
 
 html {
@@ -47,6 +48,12 @@ body {
     width: 100px;
 }
 
+
+.logo:first-child { /*moved this from the 500px media query*/
+    margin-right: auto;
+    margin-left: .25em;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -76,6 +83,8 @@ h1 {
     font-size: 2em;
     font-style: italic;
     text-shadow: 1.5px 1.5px #b7b7a4;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 
@@ -85,6 +94,9 @@ section {
     margin-bottom: 2em;
     font-weight: 700;
     color: rgba(104, 104, 104, 80%);
+    padding-right: .5em;
+    padding-left: .5em;
+    
 }
 
 .buttonwrapper {
@@ -207,15 +219,17 @@ a {
     display: none;
 }
 
-.logo:first-child {
-    margin-right: auto;
-    margin-left: .5em;
-}
-
 .link:last-child {
     margin-right: 1.5em;
 }
+
+.logo:first-child { /*moved this from the 500px media query*/
+    margin-right: auto;
+    margin-left: .25em;
 }
+}
+
+
 
 /*medium device media queries*/
 
